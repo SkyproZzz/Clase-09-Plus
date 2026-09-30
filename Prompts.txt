@@ -1,0 +1,4 @@
+IA utilizada: GitHub Copilot.
+
+Prompt utilizado:
+"Quiero que reemplaces los colores y valores más comunes en el código usando variables, además de agregar media queries (@media) para tablets (768px) celulares (480px), en el nav del formato de celular tienen que quedar solamente los iconos y por ultimo crea un archivo .txt en el que se informe que IA se usó, además de los prompts usados"

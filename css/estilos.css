@@ -1,5 +1,29 @@
-*{
-    margin: 0;
+:root {
+    --color-page: #3b3d3a;
+    --color-nav: #7ab2b2;
+    --color-nav-active: #007bff;
+    --color-section: #cde8e5;
+    --color-footer: #4d869c;
+    --color-light: #fff;
+    --color-form-text: gray;
+    --color-form-background: lightgray;
+    --color-input-border: #ccc;
+    --space-small: 5px;
+    --space-medium: 10px;
+    --space-large: 20px;
+    --space-link: 15px;
+    --form-side-margin: 100px;
+    --border-width: 1px;
+    --radius-small: 4px;
+    --radius-medium: 5px;
+    --radius-large: 10px;
+    --font-nav: 20px;
+    --font-section: 25px;
+    --hero-height: 400px;
+    --icon-size: 24px;
+}
+
+* {
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -8,13 +32,13 @@
 
 body {
     font-family: 'caveat', cursive;
-    background-color: #3b3d3a;
+    background-color: var(--color-page);
 }
 
 
 nav {
-    background-color: #7ab2b2;
-    padding: 10px;
+    background-color: var(--color-nav);
+    padding: var(--space-medium);
     width: 100%;
 }
 
@@ -24,16 +48,16 @@ nav ul {
 
 nav ul li {
     display: inline-block;
-    margin: 0 10px;
-    border-radius: 10px;
+    margin: 0 var(--space-medium);
+    border-radius: var(--radius-large);
 }
 
 nav ul li:hover {
-    background-color: #007bff;
+    background-color: var(--color-nav-active);
 }
 
 nav ul li:first-child {
-    background-color: #007bff;
+    background-color: var(--color-nav-active);
 }
 
 nav ul li:last-child {
@@ -41,35 +65,38 @@ nav ul li:last-child {
 }
 
 nav ul li a {
-    color: white;
+    color: var(--color-light);
     text-decoration: none;
-    margin: 0 15px;
-    font-size: 20px;
+    margin: 0 var(--space-link);
+    font-size: var(--font-nav);
     font-weight: bold;
     display: block;
-    padding: 10px 15px;
+    padding: var(--space-medium) var(--space-link);
 }
 
 nav ul li a img {
     vertical-align: middle;
-    margin-right: 5px;
+    margin-right: var(--space-small);
+    width: var(--icon-size);
+    height: var(--icon-size);
+    object-fit: contain;
 }
 
 .Hero img {
-    padding: 20px 20px 0 20px;
+    padding: var(--space-large) var(--space-large) 0;
     width: 100%;
-    height: 400px;
+    height: var(--hero-height);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
 
 section {
-    padding: 20px;
-    background-color: #cde8e5;
-    margin: 20px;
-    border-radius: 5px;
-    font-size: 25px;
+    padding: var(--space-large);
+    background-color: var(--color-section);
+    margin: var(--space-large);
+    border-radius: var(--radius-medium);
+    font-size: var(--font-section);
 }
 
 h2, h3 {
@@ -77,11 +104,11 @@ h2, h3 {
 }
 
 footer {
-    background-color: #4d869c;
-    color: white;
+    background-color: var(--color-footer);
+    color: var(--color-light);
     text-align: center;
-    padding: 10px;
-    margin-top: 20px;
+    padding: var(--space-medium);
+    margin-top: var(--space-large);
     bottom: 0;
     width: 100%;
 }
@@ -89,16 +116,80 @@ footer {
 /* Estilos para la página de contacto */
 form {
     font-size: 0.8rem;
-    color: gray;
-    background-color: lightgray;
-    margin: 0 100px;
-    padding: 10px;
+    color: var(--color-form-text);
+    background-color: var(--color-form-background);
+    margin: 0 var(--form-side-margin);
+    padding: var(--space-medium);
 }
 
 input, textarea {
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: var(--space-medium);
+    margin: var(--space-medium) 0;
+    border: var(--border-width) solid var(--color-input-border);
+    border-radius: var(--radius-small);
+}
+
+@media (max-width: 768px) {
+    :root {
+        --hero-height: 300px;
+        --font-section: 21px;
+    }
+
+    nav ul li {
+        margin: 0 var(--space-small);
+    }
+
+    nav ul li a {
+        margin: 0;
+        padding: 8px 10px;
+        font-size: 18px;
+    }
+
+    form {
+        margin: 0 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --hero-height: 220px;
+        --font-section: 18px;
+    }
+
+    nav ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    nav ul li,
+    nav ul li:last-child {
+        float: none;
+        margin: 0;
+    }
+
+    nav ul li a {
+        min-width: 40px;
+        margin: 0;
+        padding: 8px;
+        text-align: center;
+    }
+
+    nav ul li a .nav-label {
+        display: none;
+    }
+
+    nav ul li a img {
+        margin-right: 0;
+    }
+
+    section {
+        padding: var(--space-medium);
+        margin: var(--space-medium);
+    }
+
+    form {
+        margin: 0;
+    }
 }
