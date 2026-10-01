@@ -1,3 +1,4 @@
+/*Variables*/
 :root {
     --color-page: #3b3d3a;
     --color-nav: #7ab2b2;
@@ -22,7 +23,7 @@
     --hero-height: 400px;
     --icon-size: 24px;
 }
-
+/*Global*/
 * {
     padding: 0;
     box-sizing: border-box;
@@ -34,8 +35,7 @@ body {
     font-family: 'caveat', cursive;
     background-color: var(--color-page);
 }
-
-
+/*Barra de navegación*/
 nav {
     background-color: var(--color-nav);
     padding: var(--space-medium);
@@ -81,7 +81,7 @@ nav ul li a img {
     height: var(--icon-size);
     object-fit: contain;
 }
-
+/*Imagen y contenido de la página*/
 .Hero img {
     padding: var(--space-large) var(--space-large) 0;
     width: 100%;
@@ -130,6 +130,7 @@ input, textarea {
     border-radius: var(--radius-small);
 }
 
+/*Adaptación a dispositivos móviles*/
 @media (max-width: 768px) {
     :root {
         --hero-height: 300px;
