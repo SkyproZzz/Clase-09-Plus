@@ -7,6 +7,7 @@
         <title>Contacto | Ejercicio con Box Model</title>
         <link rel="stylesheet" href="./css/estilos.css">
         <link rel="shortcut icon" href="./assets/Icons/web-development.png">
+
         <!--Letras-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,17 +24,16 @@
         <nav>
                 <ul>
                     <li><a href="contacto.html" aria-label="Contacto"> <i class="fa-solid fa-envelope fa-beat"></i> <span class="nav-label">Contacto</span></a></li>
-                    <li><a href="index.htm" aria-label="Inicio"> <i class="fa-solid fa-house-user fa-beat"></i> <span class="nav-label">Inicio</span></a></li>
+                    <li><a href="index.html" aria-label="Inicio"> <i class="fa-solid fa-house-user fa-beat"></i> <span class="nav-label">Inicio</span></a></li>
                 </ul>
         </nav>
 
         <section class="formulario">
             <h2>Contactate con nosotros</h2>
-
-            <form name="formulario" method="POST" netlify>
+            <form name="formulario" netlify>
 
                 <label for="nombre">Nombre y Apellido</label>
-                <input type="text" name="nombre" id="nonbre" placeholder="Ingrese su nombre" required>
+                <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" required>
 
                 <label for="correo">Correo electrónico</label>
                 <input type="email" name="correo" id="correo" placeholder="ingrese su correo electrónico" required>
@@ -44,13 +44,10 @@
                 <button type="submit" class="guardar">Enviar la consulta</button>
                 <button type="reset" class="cancelar">Borrar los datos</button>
             </form>
-
         </section>
 
         <footer>
             <h4>&copy; Derechos reservados 2026</h4>
         </footer>
-
     </body>
-
 </html>
